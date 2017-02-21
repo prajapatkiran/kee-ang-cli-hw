@@ -1,0 +1,33 @@
+{
+  "name": "kee-ng2-hw-app",
+  "version": "0.0.1",
+  "description": "Angular 2 Hello World App",
+  "scripts": {
+    "start": "npm run build && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "test": "npm run build && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
+    "test-once": "npm run build && karma start karma.conf.js --single-run",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "build": "rm -rf lib && tsc -p . && tsc",
+    "prepublish": "npm run build"
+  },
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "author": "Kiran Prajapat",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^2.3.1",
+    "@angular/compiler": "^2.3.1",
+    "@angular/core": "^2.3.1",
+    "@angular/forms": "^2.3.1",
+    "@angular/http": "^2.3.1",
+    "@angular/platform-browser": "^2.3.1",
+    "@angular/platform-browser-dynamic": "^2.3.1",
+    "@angular/router": "^3.4.8",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.1",
+    "ts-helpers": "^1.1.1",
+    "zone.js": "^0.7.2"
+  }
+}
